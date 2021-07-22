@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+:root {
+	--darkgrey:#3b3b3b;
+	--lightgrey:#768c90;
+	--lightestgrey:#dcdedf;
+	--red:#c7535d;
+	--yellow:#fec14f;
+	--nearlyblack:#3b3b3b;
+	--lightyellow:#ffeac4;
+	--grey:#767676;
+}
+
+
