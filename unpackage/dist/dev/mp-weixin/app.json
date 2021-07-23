@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/index/test"
+    "pages/index/test",
+    "pages/index/text",
+    "pages/index/poet",
+    "pages/higurashi/index"
   ],
   "subPackages": [],
   "window": {

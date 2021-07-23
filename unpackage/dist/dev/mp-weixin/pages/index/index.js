@@ -152,6 +152,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
@@ -163,12 +165,23 @@ var _default =
 
   },
   methods: {
-    go: function go() {
-      console.log(123123123123);
+    goTest: function goTest() {
       // window.open(this.href)
       //在起始页面跳转到test.vue页面并传递参数
       uni.navigateTo({
         url: 'test?id=1&name=uniapp' });
+
+    },
+    goText: function goText() {
+      // window.open(this.href)
+      //在起始页面跳转到test.vue页面并传递参数
+      uni.navigateTo({
+        url: 'text?id=1&name=uniapp' });
+
+    },
+    goTigurashi: function goTigurashi() {
+      uni.navigateTo({
+        url: 'higurashi/index?id=1&name=uniapp' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

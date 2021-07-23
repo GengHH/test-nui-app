@@ -21,6 +21,11 @@
 			"style": {
 				"navigationBarTitleText": "uni-app-poet"
 			}
+		}, {
+			"path": "pages/higurashi/index",
+			"style": {
+				"navigationBarTitleText": "higurashi"
+			}
 		}
 	],
 	"globalStyle": {

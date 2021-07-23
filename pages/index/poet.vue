@@ -12,7 +12,8 @@
 			此去经年，应是良辰好景虚设。<br>
 			便纵有千种风情，更与何人说？
 		<p>
-		<p class="author">——&lt;宋&gt;<strong>柳永</strong></p>
+		<!-- <p class="author">——&lt;宋&gt;<strong>柳永</strong></p> -->
+		<p class="author">——《宋》<strong>柳永</strong></p>
 	</div>
 
 </template>

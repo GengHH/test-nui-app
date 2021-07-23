@@ -11,8 +11,9 @@
 		<span class="text text-4">1</span>
 		<span class="text text-2">.</span>
 		<!-- partial -->
-		<button type="default" @click="goTest()">goTest</button>
+		<button type="default" @click="goTigurashi()">goTest</button>
 		<button type="default" @click="goText()">goText</button>
+		<button type="default" @click="goTigurashi()">goTigurashi</button>
 	</view>
 </template>
 
@@ -39,6 +40,11 @@
 				//在起始页面跳转到test.vue页面并传递参数
 				uni.navigateTo({
 					url: 'text?id=1&name=uniapp'
+				});
+			},	
+			goTigurashi() {
+				uni.navigateTo({
+					url: 'higurashi/index?id=1&name=uniapp'
 				});
 			}
 		}
