@@ -13,7 +13,7 @@
 		<!-- partial -->
 		<button type="default" @click="goTigurashi()">goTest</button>
 		<button type="default" @click="goText()">goText</button>
-		<button type="default" @click="goTigurashi()">goTigurashi</button>
+		<button type="default" @click="goTest()">goTigurashi</button>
 	</view>
 </template>
 
@@ -34,17 +34,21 @@
 				uni.navigateTo({
 					url: 'test?id=1&name=uniapp'
 				});
-			},	
+			},
 			goText() {
 				// window.open(this.href)
 				//在起始页面跳转到test.vue页面并传递参数
 				uni.navigateTo({
 					url: 'text?id=1&name=uniapp'
 				});
-			},	
+			},
 			goTigurashi() {
+				console.log(this._)
+				console.log(this._.add(1,2))
+				// window.open(this.href)
+				//在起始页面跳转到test.vue页面并传递参数
 				uni.navigateTo({
-					url: 'higurashi/index?id=1&name=uniapp'
+					url: 'hig?id=1&name=uniapp'
 				});
 			}
 		}
@@ -53,14 +57,15 @@
 
 <style>
 	/* @import url("https://fonts.googleapis.com/css?family=Modak"); */
-/* latin */
-@font-face {
-  font-family: 'Gloria Hallelujah';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/gloriahallelujah/v12/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS11zM.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+	/* latin */
+	@font-face {
+		font-family: 'Gloria Hallelujah';
+		font-style: normal;
+		font-weight: 400;
+		src: url(https://fonts.gstatic.com/s/gloriahallelujah/v12/LYjYdHv3kUk9BMV96EIswT9DIbW-MIS11zM.woff2) format('woff2');
+		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -80,7 +85,7 @@
 	.text-area {
 		display: flex;
 		justify-content: center;
-		height:var(--status-bar-height);
+		height: var(--status-bar-height);
 	}
 
 	.title {
