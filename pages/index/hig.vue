@@ -1,6 +1,14 @@
 <template>
 	<div>
-
+		<view class="text1">
+			哈哈哈哈
+		</view>
+		<view class="text2">
+			嘿嘿嘿嘿
+		</view>
+		<view class="text3">
+			呀呀呀呀
+		</view>
 		<!-- 全屏滑动日暮动画 -->
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 500"
 			preserveAspectRatio="xMidYMax slice">
@@ -851,5 +859,40 @@
 	.btn:hover {
 		background: #ffffff;
 		color: #1B1734;
+	}
+
+	/* 每屏幕显示的字体 */
+	.text1 {
+		position: absolute;
+		width: 90%;
+		/* height: 100%; */
+		z-index: 10000;
+		right: 10%;
+		color: #fff;
+		text-align: left;
+		writing-mode: tb;
+		top: 50%;
+	}
+	.text2 {
+		position: absolute;
+		width: 80%;
+		/* height: 100%; */
+		z-index: 10000;
+		right: 20%;
+		color: #fff;
+		text-align: left;
+		writing-mode: tb;
+		top: 50%;
+	}
+	.text3 {
+		position: absolute;
+		width: 70%;
+		/* height: 100%; */
+		z-index: 10000;
+		right: 30%;
+		color: #fff;
+		text-align: left;
+		writing-mode: tb;
+		top: 50%;
 	}
 </style>

@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<uni-rate></uni-rate><!-- 这里会显示一个五角星，并且点击后会自动亮星 -->
 		<image class="logo" src="/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
@@ -11,9 +12,9 @@
 		<span class="text text-4">1</span>
 		<span class="text text-2">.</span>
 		<!-- partial -->
-		<button type="default" @click="goTigurashi()">goTest</button>
+		<button type="default" @click="goTest()">goTest</button>
 		<button type="default" @click="goText()">goText</button>
-		<button type="default" @click="goTest()">goTigurashi</button>
+		<button type="default" @click="goTigurashi()">goTigurashi</button>
 	</view>
 </template>
 

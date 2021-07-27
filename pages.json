@@ -22,7 +22,7 @@
 				"navigationBarTitleText": "uni-app-poet"
 			}
 		}, {
-			"path": "pages/higurashi/index",
+			"path": "pages/index/hig",
 			"style": {
 				"navigationBarTitleText": "higurashi"
 			}
