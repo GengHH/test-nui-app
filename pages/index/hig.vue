@@ -358,7 +358,7 @@
 			return {}
 		},
 		onReady() {
-			this.load();
+			//this.load();
 		},
 		methods: {
 			load() {
