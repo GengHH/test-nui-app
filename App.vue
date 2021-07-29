@@ -13,6 +13,9 @@
 </script>
 
 <style>
+	uni-page-body, uni-page-refresh{
+		height: 100%;
+	}
 	/*每个页面公共css */
 	:root {
 		--darkgrey:#3b3b3b;
