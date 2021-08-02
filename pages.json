@@ -5,6 +5,11 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},{
+			"path": "pages/index/second",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
 		}, {
 			"path": "pages/index/test",
 			"style": {
