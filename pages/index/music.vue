@@ -40,6 +40,7 @@
 		/* background-image: url(normalmusic.svg); */
 		background-image: url(../../static/img/music.png);
 		background-size: contain;
+		z-index: 999;
 	}
 
 	.rotate {

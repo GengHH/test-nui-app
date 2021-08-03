@@ -1,6 +1,7 @@
 
 <template>
 	<view class="content">
+		<music></music>
 		<!-- <uni-rate></uni-rate><!-- 这里会显示一个五角星，并且点击后会自动亮星 --> -->
 		<!-- love heart -->
 		<div class="back"></div>
@@ -77,7 +78,11 @@
 </template>
 
 <script>
+	import music from './music.vue';
 	export default {
+		components:{
+			music
+		},
 		data() {
 			return {
 				title: 'Hello! This my first uniCloud App.'

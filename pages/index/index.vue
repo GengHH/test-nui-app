@@ -1,6 +1,6 @@
 <template>
 	<view class="flex-container">
-		<music></music>
+		<!-- <music></music> -->
 		<uni-row class="unit">
 			<!-- <div class="unit"> -->
 			<uni-row class="heart">
@@ -15,9 +15,11 @@
 				<div class="heart-piece-8"></div>
 			</uni-row>
 			<p>love is love</p>
-			<!-- <p class="tip">准备好开始</p>
-			<p class="tip">❥(^_-)</p>
-			<p class="tip">的旅程了吗？</p> -->
+			<!-- <p class="tip">准备好开始❥(^_-)的旅程了吗？</p> -->
+			<!-- </div> -->
+		</uni-row>
+		<uni-row class="text">
+			<p class="tip">准备好开始❥(^_-)的旅程了吗？</p>
 			<!-- </div> -->
 		</uni-row>
 		<!-- Loader 2 -->
@@ -43,7 +45,7 @@
 <script>
 	import music from './music.vue';
 	export default {
-		components:{
+		components: {
 			music
 		},
 		data() {
@@ -52,7 +54,7 @@
 			}
 		},
 		onReady() {
-			// this.goNextStep();
+			this.goNextStep();
 		},
 		methods: {
 			goNextStep() {
@@ -62,7 +64,7 @@
 					uni.navigateTo({
 						url: 'second?id=1&name=uniapp'
 					});
-				}, 3000);
+				}, 4200);
 			}
 		}
 	}
@@ -380,7 +382,7 @@
 
 
 	.tip {
-		animation: tip 1s linear infinite;
+		animation: tip 2s linear infinite;
 	}
 
 	@keyframes tip {
@@ -389,12 +391,12 @@
 		10%,
 		90%,
 		100% {
-			opacity: 0;
+			opacity: .3;
 		}
 
 		45%,
 		55% {
-			opacity: 1;
+			opacity: .8;
 		}
 	}
 </style>
@@ -411,6 +413,16 @@
 		background: #e74c3c;
 		text-align: center;
 		font-family: "Comfortaa", cursive;
+	}
+
+	.text {
+		font-family: 'Lato', sans-serif;
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		bottom: 100px;
+		text-align: center;
+		color: #fff;
 	}
 
 	.svg {
