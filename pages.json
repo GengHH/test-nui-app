@@ -3,33 +3,39 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "LOVE"
 			}
 		},{
 			"path": "pages/index/second",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "LOVE"
 			}
 		}, {
 			"path": "pages/index/test",
 			"style": {
-				"navigationBarTitleText": "uni-app-test",
+				"navigationBarTitleText": "LOVE",
 				"enablePullDownRefresh": true //开启下拉刷新
 			}
 		}, {
 			"path": "pages/index/text",
 			"style": {
-				"navigationBarTitleText": "uni-app-text"
+				"navigationBarTitleText": "LOVE"
 			}
 		}, {
 			"path": "pages/index/poet",
 			"style": {
-				"navigationBarTitleText": "uni-app-poet"
+				"navigationBarTitleText": "LOVE"
 			}
 		}, {
 			"path": "pages/index/hig",
 			"style": {
-				"navigationBarTitleText": "higurashi"
+				"navigationBarTitleText": "LOVE"
+			}
+		},
+		{
+			"path": "pages/index/music",
+			"style": {
+				"navigationBarTitleText": "LOVE"
 			}
 		}
 	],

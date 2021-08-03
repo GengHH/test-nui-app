@@ -1,30 +1,73 @@
 <template>
-	<uni-row id="audio_btn" class="rotate">
-		<!-- <div > -->
-		<audio loop src="bg_audio.mp3" id="media" autoplay="" preload=""></audio>
-		<!-- </div> -->
+	<uni-row id="audio_btn" :class="{rotate:rotate}">
+		<view class="audio_view" @click="play">
+			<!-- <div > -->
+			<!-- <audio v-if="type=== '1' " loop src="../../static/zc.mp3" id="media" autoplay="" preload=""></audio>
+			<audio v-if="type=== '2' " loop src="../../static/jtc.mp3" id="media" autoplay="" preload=""></audio>
+			<audio v-if="type=== '3' " loop src="../../static/dshb.mp3" id="media" autoplay="" preload=""></audio> -->
+			<!-- </div> -->
+		</view>
 	</uni-row>
 </template>
 
 <script>
 	export default {
-		data() {
-			return {
-				title: 'Hello! This my first uniCloud App.'
+		props: {
+			oneMusic: {
+				type: String,
+				default: '1'
 			}
 		},
-		onReady() {
-			this.goNextStep();
+		data() {
+			return {
+				rotate: true,
+				innerAudioContext: null
+			}
+		},
+		mounted() {
+			this.makeMusic();
 		},
 		methods: {
-			goNextStep() {
-				setTimeout(function() {
-					// window.open(this.href)
-					//在起始页面跳转到test.vue页面并传递参数
-					uni.navigateTo({
-						url: 'second?id=1&name=uniapp'
-					});
-				}, 3000);
+			makeMusic() {
+				let innerAudioContext = uni.createInnerAudioContext();
+				this.innerAudioContext = innerAudioContext;
+				innerAudioContext.autoplay = true;
+				innerAudioContext.loop = true;
+
+				innerAudioContext.src =
+					'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3';
+				if (this.oneMusic === '1') {
+					innerAudioContext.src = '../../static/zc.mp3';
+				}
+				if (this.oneMusic === '2') {
+					innerAudioContext.src = '../../static/jtc.mp3';
+				}
+				if (this.oneMusic === '3') {
+					innerAudioContext.src = '../../static/dshb.mp3';
+				}
+				innerAudioContext.onPlay(() => {
+					this.rotate = true;
+					// console.log('开始播放');
+				});
+				innerAudioContext.onPause(() => {
+					this.rotate = !this.rotate;
+					// console.log('暂停');
+				});
+				innerAudioContext.onError((res) => {
+					console.log(res.errMsg);
+					console.log(res.errCode);
+				});
+			},
+			play() {
+				if (this.innerAudioContext && this.rotate) {
+					console.log(0);
+					/*音乐暂停*/
+					this.innerAudioContext.pause();
+				} else if (this.innerAudioContext && !this.rotate) {
+					console.log(1);
+					/*音乐开启*/
+					this.innerAudioContext.play();
+				}
 			}
 		}
 	}
@@ -41,6 +84,11 @@
 		background-image: url(../../static/img/music.png);
 		background-size: contain;
 		z-index: 999;
+	}
+
+	.audio_view {
+		height: 100%;
+		width: 100%;
 	}
 
 	.rotate {

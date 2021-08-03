@@ -89,7 +89,7 @@
 			}
 		},
 		onLoad() {
-
+			console.log(123);
 		},
 		methods: {
 			goTest() {
