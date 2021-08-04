@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
 		<music></music>
-		<!-- <uni-rate></uni-rate><!-- 这里会显示一个五角星，并且点击后会自动亮星 --> -->
+
 		<!-- love heart -->
 		<div class="back"></div>
 		<div class="love"></div>
@@ -40,7 +40,7 @@
 		<div class="main-content">
 			<div class="item button-pulse" style="--bg-color: #e67e22">
 				<div v-if="!goStatus" style="text-align: center;">hahahha</div>
-				<div  v-else  class="button__wrapper">
+				<div v-else class="button__wrapper">
 					<div class="pulsing"></div>
 					<button @click="goTigurashi()">Click Me!</button>
 				</div>
@@ -78,7 +78,7 @@
 </template>
 
 <script>
-	import music from './music.vue';
+	import music from '../common/music.vue';
 	export default {
 		components: {
 			music
@@ -114,8 +114,6 @@
 				});
 			},
 			goTigurashi() {
-				console.log(this._)
-				console.log(this._.add(1, 2))
 				// window.open(this.href)
 				//在起始页面跳转到test.vue页面并传递参数
 				uni.navigateTo({
@@ -127,7 +125,7 @@
 </script>
 
 <style>
-	@import url("https://fonts.googleapis.com/css?family=Modak");
+	/* @import url("https://fonts.googleapis.com/css?family=Modak"); */
 
 	/* latin */
 	@font-face {
@@ -893,7 +891,7 @@
 		position: absolute;
 		bottom: 100px;
 		height: 100px;
-		display: grid;
+		/* display: grid; */
 		width: 100%;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	}
