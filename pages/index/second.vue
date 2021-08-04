@@ -78,7 +78,7 @@
 </template>
 
 <script>
-	import music from './music.vue';
+	import music from '../common/music.vue';
 	export default {
 		components:{
 			music
