@@ -1,4 +1,3 @@
-
 <template>
 	<view class="content">
 		<music></music>
@@ -40,7 +39,8 @@
 		<!-- Boutton -->
 		<div class="main-content">
 			<div class="item button-pulse" style="--bg-color: #e67e22">
-				<div class="button__wrapper">
+				<div v-if="!goStatus" style="text-align: center;">hahahha</div>
+				<div  v-else  class="button__wrapper">
 					<div class="pulsing"></div>
 					<button @click="goTigurashi()">Click Me!</button>
 				</div>
@@ -80,18 +80,25 @@
 <script>
 	import music from './music.vue';
 	export default {
-		components:{
+		components: {
 			music
 		},
 		data() {
 			return {
+				goStatus: false,
 				title: 'Hello! This my first uniCloud App.'
 			}
 		},
 		onLoad() {
-
+			this.go();
 		},
 		methods: {
+			go() {
+				console.log('hahhah')
+				setTimeout(() => {
+					this.goStatus = true;
+				}, 2000)
+			},
 			goTest() {
 				// window.open(this.href)
 				//在起始页面跳转到test.vue页面并传递参数
@@ -159,7 +166,7 @@
 	}
 
 	.demo-uni-row {
-		margin-top: 60px;
+		margin-top: 30px;
 	}
 
 	.text {
@@ -455,7 +462,7 @@
 	/* love heart end */
 	.index-text {
 		color: #FFFFFF;
-		font-size: 26px;
+		font-size: 20px;
 	}
 
 	/* balloon */
@@ -464,11 +471,11 @@
 	.balloon {
 		font-family: 'Wendy One', sans-serif;
 		/* width: 738px; */
-		width: 100%;
+		width: 80%;
 		margin: 0 auto;
 		padding-top: 30px;
 		position: absolute;
-		bottom: 15px;
+		bottom: -15px;
 	}
 
 	.balloon span {
@@ -909,10 +916,10 @@
 	button {
 		background: transparent;
 		color: #fff;
-		border: 3px solid #fff;
+		border: 2px solid #fff;
 		border-radius: 50px;
-		padding: 0.8rem 2rem;
-		font: 24px "Margarine", sans-serif;
+		padding: 10px 1rem;
+		font: 14px "Margarine", sans-serif;
 		outline: none;
 		cursor: pointer;
 		position: relative;
@@ -933,8 +940,8 @@
 	.button__wrapper {
 		display: inline-block;
 		position: relative;
-		width: 200px;
-		height: 65px;
+		width: 140px;
+		height: 40px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
