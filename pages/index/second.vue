@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<music></music>
+		<music ref="myMusic"></music>
 
 		<!-- love heart -->
 		<div class="back"></div>
@@ -33,13 +33,14 @@
 		</uni-row>
 		<uni-row class="index-text">
 			<uni-col :span="24">
-				this is for you!
+				Baby,this is for you!
 			</uni-col>
 		</uni-row>
 		<!-- Boutton -->
 		<div class="main-content">
 			<div class="item button-pulse" style="--bg-color: #e67e22">
-				<div v-if="!goStatus" style="text-align: center;">hahahha</div>
+				<!-- <div v-if="!goStatus" style="text-align: center;">hahahha</div> -->
+				<writeText v-if="!goStatus" style="text-align: center;" @writeStop="writeStop"></writeText>
 				<div v-else class="button__wrapper">
 					<div class="pulsing"></div>
 					<button @click="goTigurashi()">Click Me!</button>
@@ -79,9 +80,11 @@
 
 <script>
 	import music from '../common/music.vue';
+	import writeText from '../common/text.vue';
 	export default {
 		components: {
-			music
+			music,
+			writeText
 		},
 		data() {
 			return {
@@ -95,6 +98,11 @@
 		methods: {
 			go() {
 				console.log('hahhah')
+				setTimeout(() => {
+					this.goStatus = true;
+				}, 1000)
+			},
+			writeStop() {
 				setTimeout(() => {
 					this.goStatus = true;
 				}, 2000)
@@ -114,6 +122,7 @@
 				});
 			},
 			goTigurashi() {
+				this.$refs.myMusic.stopMusic();
 				// window.open(this.href)
 				//在起始页面跳转到test.vue页面并传递参数
 				uni.navigateTo({
@@ -125,8 +134,11 @@
 </script>
 
 <style>
-	/* @import url("https://fonts.googleapis.com/css?family=Modak"); */
+	/* #ifdef H5 */
+	@import url("https://fonts.googleapis.com/css?family=Modak");
+	/* #endif */
 
+	/* #ifdef MP-WEIXIN */
 	/* latin */
 	@font-face {
 		font-family: 'Gloria Hallelujah';
@@ -136,6 +148,7 @@
 		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 	}
 
+	/* #endif */
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -889,7 +902,7 @@
 	.main-content {
 		font-family: "Rubik", sans-serif;
 		position: absolute;
-		bottom: 100px;
+		bottom: 150px;
 		height: 100px;
 		/* display: grid; */
 		width: 100%;

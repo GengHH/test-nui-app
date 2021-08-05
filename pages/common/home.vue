@@ -21,7 +21,7 @@
 			<!-- </div> -->
 		</uni-row>
 		<uni-row class="text">
-			<h2>宝贝</h2>
+			<h2 class="tip">宝贝</h2>
 			<p class="tip">准备好开始❥(^_-)的旅程了吗？</p>
 			<!-- </div> -->
 		</uni-row>

@@ -14,8 +14,10 @@
 	export default {
 		data() {
 			return {
-				period: "2000",
-				toRotate: ["Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop."],
+				period: "1400",
+				// toRotate: ["Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop."],
+				toRotate: ["Hi, 亲爱的","(=̴̶̷̤̄ ₃ =̴̶̷̤̄)♡.", "不会吧-不会吧.", "不会以为这是给你的情书吧ಠ‿ಠ.", "是不是被骗了，哈哈哈.", 
+				"其实，是只请你听听音乐罢了","...........","是不是蛮好听的(•̀ᴗ•́)̑","逗你玩的(づ◡ど)，哈哈哈","记得点击按钮哟"],
 				loopNum: 0,
 				txt: '',
 				isDeleting: false,
@@ -23,7 +25,7 @@
 			}
 		},
 		//初始化加载
-		onReady() {
+		mounted() {
 			this.tick();
 		},
 		methods: {
@@ -32,7 +34,6 @@
 				let i = this.loopNum % this.toRotate.length;
 				let delta = 200 - Math.random() * 100;
 				let fullTxt = this.toRotate[i];
-
 				this.period = parseInt(this.period, 10) || 2000;
 				if (this.isDeleting) {
 					this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -53,9 +54,15 @@
 					delta = 500;
 				}
 
-				setTimeout(function() {
-					that.tick();
-				}, delta);
+				if (this.txt === "记得点击按钮哟") {
+					this.$emit("writeStop");
+					return;
+				} else {
+					setTimeout(function() {
+						that.tick();
+					}, delta);
+
+				}
 			}
 		}
 	}
@@ -63,14 +70,16 @@
 
 <style>
 	.textContainer {
-		background-color: #ce3635;
+		/* background-color: #da68ed; */
 		text-align: center;
 		color: #fff;
-		padding-top: 10em;
+		font-size: 16px;
+		padding: 0 10px;
+		/* padding-top: 10em; */
 	}
 
 	a {
-		color: #fff;
+		color: #ff5722a8;
 		text-decoration: none;
 	}
 

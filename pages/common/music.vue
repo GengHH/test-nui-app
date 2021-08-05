@@ -25,17 +25,29 @@
 			}
 		},
 		mounted() {
+			console.log('mounted')
 			this.makeMusic();
 		},
+		destroyed() {
+			console.log('destroyed')
+			this.innerAudioContext.stop();
+		},
 		methods: {
+			stopMusic(){
+				this.rotate = !this.rotate;
+				this.innerAudioContext.stop();	
+			},
 			makeMusic() {
+				if (this.innerAudioContext) {
+					this.innerAudioContext.play();
+					return;
+				}
 				let innerAudioContext = uni.createInnerAudioContext();
 				this.innerAudioContext = innerAudioContext;
 				innerAudioContext.autoplay = true;
 				innerAudioContext.loop = true;
 
-				innerAudioContext.src =
-					'https://bjetxgzv.cdn.bspapp.com/VKCEYUGU-hello-uniapp/2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3';
+				innerAudioContext.src = '';
 				if (this.oneMusic === '1') {
 					innerAudioContext.src = '../../static/zc.mp3';
 				}

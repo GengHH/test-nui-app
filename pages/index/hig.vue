@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!-- <music oneMusic="2"></music> -->
 		<view class="text1">
 			哈哈哈哈
 		</view>
@@ -359,9 +360,13 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script> -->
 <script>
+	import music from '../common/music.vue';
 	import gsap from '@/static/SDK/gsap.min.js';
 	import ScrollTrigger from '@/static/SDK/ScrollTrigger.min.js';
 	export default {
+		components:{
+			music
+		},
 		data() {
 			return {}
 		},

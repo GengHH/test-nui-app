@@ -13,15 +13,10 @@
 				"navigationBarTitleText": "LOVE"
 			}
 		}, {
-			"path": "pages/index/test",
+			"path": "pages/index/helpMe",
 			"style": {
 				"navigationBarTitleText": "LOVE",
 				"enablePullDownRefresh": true //开启下拉刷新
-			}
-		}, {
-			"path": "pages/index/text",
-			"style": {
-				"navigationBarTitleText": "LOVE"
 			}
 		}, {
 			"path": "pages/index/poet",
@@ -41,7 +36,7 @@
 		// 		"navigationBarTitleText": "LOVE"
 		// 	}
 		// }
-	],
+    ],
 	"globalStyle": {
 		"navigationStyle": "custom",
 		"navigationBarTextStyle": "black",
