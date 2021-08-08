@@ -75,7 +75,7 @@
 					// 	url: 'https://static-6294bbe6-5207-4f48-a030-98219bdba3b7.bspapp.com'
 					// });
 					// // #endif
-				}, 4200);
+				}, 4500);
 			}
 		}
 	}

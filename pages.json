@@ -29,6 +29,24 @@
 				"navigationBarTitleText": "LOVE"
 			}
 		}
+        ,{
+            "path" : "pages/index/heart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "HEART",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/star",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
 		// #endif
 		// {
 		// 	"path": "pages/index/music",

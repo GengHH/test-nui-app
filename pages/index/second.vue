@@ -93,7 +93,7 @@
 			}
 		},
 		onLoad() {
-			this.go();
+			//this.go();
 		},
 		methods: {
 			go() {
@@ -107,20 +107,7 @@
 					this.goStatus = true;
 				}, 2000)
 			},
-			goTest() {
-				// window.open(this.href)
-				//在起始页面跳转到test.vue页面并传递参数
-				uni.navigateTo({
-					url: 'test?id=1&name=uniapp'
-				});
-			},
-			goText() {
-				// window.open(this.href)
-				//在起始页面跳转到test.vue页面并传递参数
-				uni.navigateTo({
-					url: 'text?id=1&name=uniapp'
-				});
-			},
+		
 			goTigurashi() {
 				this.$refs.myMusic.stopMusic();
 				// window.open(this.href)
